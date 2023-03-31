@@ -18,4 +18,4 @@ RUN useradd -ms /bin/bash omnisette \
 # Run the artefact
 USER omnisette
 EXPOSE 80
-ENTRYPOINT [ "/opt/omnisette-server" ]
+ENTRYPOINT [ "/opt/omnisette-server" "--ip 127.0.0.1" ]
