@@ -13,7 +13,7 @@ RUN useradd -ms /bin/bash omnisette \
  && curl https://apps.mzstatic.com/content/android-apple-music-apk/applemusic.apk -o /tmp/applemusic.zip \
  && unzip /tmp/applemusic.zip -d /tmp && mv /tmp/lib /opt/ && rm -rf /tmp/* \
  && tag_name=`curl -s https://api.github.com/repos/SideStore/omnisette-server/releases/latest | grep tag_name|cut -f4 -d "\""` \
- && curl -L https://github.com/SideStore/omnisette-server/releases/download/${tag_name}/omnisette-server-linux-`arch` -o /opt/omnisette-server \
+ && curl -L https://github.com/SideStore/omnisette-server/releases/download/${tag_name}/omnisette-server-linux-x86_64 -o /opt/omnisette-server \
  && chmod +x /opt/omnisette-server
 
 # Run the artefact
